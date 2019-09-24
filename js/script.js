@@ -123,11 +123,13 @@ $(".activities").change (()=>{                                 //this function c
   if($("input[name='npm']").prop("checked")){
     totalSum += 100;
   }
-  $("#total").text(totalSum);
+  $("#total").text('$' + totalSum);
 });
 $("#credit-card").hide();                                   //hides credit card option
 $("#paypal").hide();                                        //hides paypal payment option
 $("#bitcoin").hide();                                       //hides bitcoin payment option
+$('#payment').val('Credit Card');
+$("#payment option[value='select method']").prop('disabled',true);
 $("#payment").change( ()=>{
   if($("#payment").val() == "Credit Card") {                //if they select credit card as an option credit card menu pops up and others disappear
     $("#credit-card").show();
