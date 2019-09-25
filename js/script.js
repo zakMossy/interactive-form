@@ -18,8 +18,8 @@ function validate (target) {                                          //validate
     if ($(target).val() == "") {
       handleError(target,"(empty)");
     } else if ($.isNumeric($(target).val()) &&
-        $(theTarget).val().length >= 13 &&
-        $(theTarget).val().length <= 16) {
+        $(target).val().length >= 13 &&
+        $(target).val().length <= 16) {
           handleError(target,"");
         } else {
             handleError(target,"(13-16 digits)");
@@ -124,8 +124,7 @@ $(".activities").change (()=>{                                 //this function c
     totalSum += 100;
   }
   $("#total").text('$' + totalSum);
-});
-$("#credit-card").hide();                                   //hides credit card option
+});                               
 $("#paypal").hide();                                        //hides paypal payment option
 $("#bitcoin").hide();                                       //hides bitcoin payment option
 $('#payment').val('Credit Card');
