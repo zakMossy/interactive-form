@@ -124,7 +124,7 @@ $(".activities").change (()=>{                                 //this function c
     totalSum += 100;
   }
   $("#total").text('$' + totalSum);
-});                               
+});
 $("#paypal").hide();                                        //hides paypal payment option
 $("#bitcoin").hide();                                       //hides bitcoin payment option
 $('#payment').val('Credit Card');
@@ -154,6 +154,9 @@ $("#register").click((e)=>{                                 //makes the register
     validate($("#cc-num")[0]);
     validate($("#zip")[0]);
     validate($("#cvv")[0]);
+  }
+  if($(".activities input[type=checkbox]:checked").length > 0){
+    validate($(".activites")[0]);
   }
   if($(".error").length == 0){
     $("form").submit();
