@@ -52,7 +52,7 @@ function validate (target) {                                          //validate
 }
 function handleError (errorTarget, errorMessage){                   //creates the error message
   if($(errorTarget).hasClass("activities")){
-    text = $("#activities-legend");
+    text = $(".activities legend");
   }else{
          text = $("label[for='" + errorTarget.id + "']");
     }
@@ -67,6 +67,7 @@ function handleError (errorTarget, errorMessage){                   //creates th
       $(errorTarget).removeClass("error");
     }
 }
+$("#design option[value='select']").hide();                           // hides the 'select theme' option
 $("#name").focus();                                                  //puts you in the name input box when you first get on the page
 $("#other-title").hide();                                            //hides the other job role input box
   $("#title").change( () => {                                      //this function shows the other job role input box if other is chosen
